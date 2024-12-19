@@ -17,7 +17,7 @@ app.use(hpp())
 
 const limiter = rateLimit({windowMs:15*60*1000,max:3000})
 app.use(limiter)
-mongoose.connect("mongodb://localhost:27017/assignment",{autoIndex:true}).then(()=>{
+mongoose.connect("mongodb+srv://rayhan:rayhan1234@shop.looku.mongodb.net/assignment",{autoIndex:true}).then(()=>{
     console.log("MongoDB Connected!")
 }).catch(err=>{
     console.log({message:"MongoDB Connection Error",error:err.toString()});});
